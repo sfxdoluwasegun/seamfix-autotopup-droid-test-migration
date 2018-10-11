@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Auto Top Up Suite">
+    <parameter name="groupReport" value="/DroidReport.html"/>
+    <parameter name="toMails" value="knwabueze@seamfix.com;soli@seamfix.com;cngwu@seamfix.com"/>
+    <test name="AutoTopUp-Android">
+        <parameter name="email" value="test@yopmail.com"/>
+        <parameter name="systemPort" value="8220"/>
+        <parameter name="deviceNo" value="1"/>
+        <classes>
+            <class name="admin.Login">
+                <methods>
+                    <include name="loginWithEmptyEmailAndPassword" />
+                    <include name="loginWithEmptyEmailAndValidPassword"/>
+                    <include name="loginWithValidEmailAndInvalidPassword"/>
+                    <include name="loginWithInvalidEmailAndValidPassword"/>
+                    <include name="loginWithInValidEmailAndInvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
