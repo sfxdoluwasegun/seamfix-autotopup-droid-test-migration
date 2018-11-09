@@ -151,8 +151,8 @@ public class TestBase {
     }
 
     @Test
-    @Parameters("email")
-    public static void login(String email) throws InterruptedException {
+    @Parameters({"email", "pwd"})
+    public static void Login(String email, String pwd) throws InterruptedException {
         Thread.sleep(500);
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.seamfix.autotopup:id/app_title")));
@@ -161,7 +161,7 @@ public class TestBase {
         getDriver().findElement(By.id("com.seamfix.autotopup:id/email_address_input")).clear();
         getDriver().findElement(By.id("com.seamfix.autotopup:id/email_address_input")).sendKeys(email);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/password_input")).clear();
-        getDriver().findElement(By.id("com.seamfix.autotopup:id/password_input")).sendKeys("password");
+        getDriver().findElement(By.id("com.seamfix.autotopup:id/password_input")).sendKeys(pwd);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/login_button")).click();
         Thread.sleep(1000);
         if(TestUtils.isElementPresent("ID", "com.seamfix.autotopup:id/alertTitle")){
@@ -169,4 +169,13 @@ public class TestBase {
         }
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Auto Top Up']")));
     }
+
+    public static String generateSerialNumber() {
+
+        long y = (long) (Math.random() * 100000 + 1000000L);
+        String num = Long.toString(y);
+        return num;
+
+    }
+
 }

@@ -56,7 +56,12 @@ public class Login extends TestBase {
 
     @Test
     public void loginWithInvalidEmailAndValidPassword() throws InterruptedException{
+
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.seamfix.autotopup:id/email_address_input")));
+        Thread.sleep(1000);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/email_address_input")).clear();
+        Thread.sleep(500);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/email_address_input")).sendKeys("test@yopmail.com");
         getDriver().findElement(By.id("com.seamfix.autotopup:id/password_input")).clear();
         getDriver().findElement(By.id("com.seamfix.autotopup:id/password_input")).sendKeys("password");
@@ -69,6 +74,7 @@ public class Login extends TestBase {
     public void loginWithInValidEmailAndInvalidPassword() throws InterruptedException{
 
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.seamfix.autotopup:id/email_address_input")));
         getDriver().findElement(By.id("com.seamfix.autotopup:id/email_address_input")).clear();
         getDriver().findElement(By.id("com.seamfix.autotopup:id/email_address_input")).sendKeys("invalidEmail@yopmail.com");
         getDriver().findElement(By.id("com.seamfix.autotopup:id/password_input")).clear();

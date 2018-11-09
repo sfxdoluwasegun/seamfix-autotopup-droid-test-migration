@@ -4,7 +4,8 @@
     <parameter name="groupReport" value="/DroidReport.html"/>
     <parameter name="toMails" value="knwabueze@seamfix.com;soli@seamfix.com;cngwu@seamfix.com"/>
     <test name="AutoTopUp-Android">
-        <parameter name="email" value="test@yopmail.com"/>
+        <parameter name="email" value="sunepastar13@gmail.com"/>
+        <parameter name="pwd" value="123456add"/>
         <parameter name="systemPort" value="8220"/>
         <parameter name="deviceNo" value="1"/>
         <classes>
@@ -15,6 +16,13 @@
                     <include name="loginWithValidEmailAndInvalidPassword"/>
                     <include name="loginWithInvalidEmailAndValidPassword"/>
                     <include name="loginWithInValidEmailAndInvalidPassword"/>
+                </methods>
+            </class>
+
+            <class name="admin.AutoTopUp">
+                <methods>
+                    <include name="Login" />
+                    <include name="AutoTopupWithNumber" />
                 </methods>
             </class>
         </classes>
