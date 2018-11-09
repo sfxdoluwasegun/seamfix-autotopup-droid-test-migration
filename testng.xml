@@ -2,13 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Auto Top Up Suite">
     <parameter name="groupReport" value="/DroidReport.html"/>
-    <parameter name="toMails" value="knwabueze@seamfix.com;soli@seamfix.com;cngwu@seamfix.com"/>
+    <parameter name="toMails" value="soli@seamfix.com;"/>
     <test name="AutoTopUp-Android">
         <parameter name="email" value="sunepastar13@gmail.com"/>
         <parameter name="pwd" value="123456add"/>
         <parameter name="systemPort" value="8220"/>
         <parameter name="deviceNo" value="1"/>
         <classes>
+<!--
             <class name="admin.Login">
                 <methods>
                     <include name="loginWithEmptyEmailAndPassword" />
@@ -18,11 +19,21 @@
                     <include name="loginWithInValidEmailAndInvalidPassword"/>
                 </methods>
             </class>
-
+-->
+<!--
             <class name="admin.AutoTopUp">
                 <methods>
                     <include name="Login" />
                     <include name="AutoTopupWithNumber" />
+                </methods>
+            </class>-->
+
+            <class name="admin.InstantPopUp">
+                <methods>
+                    <include name="Login" />
+                    <include name="InstantPopUpMyNum"/>
+                    <include name="InstantPopUpNewNum"/>
+                    <include name="InstantPopUpFromSavedProfiles"/>
                 </methods>
             </class>
         </classes>
