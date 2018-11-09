@@ -97,6 +97,7 @@ public class TestUtils extends TestBase {
         scroll(pressX, bottomY, pressX, topY);
     }
 
+
     public static void hideKeyboard() throws InterruptedException {
         if (getDriver().isKeyboardShown()) {
             getDriver().hideKeyboard();
