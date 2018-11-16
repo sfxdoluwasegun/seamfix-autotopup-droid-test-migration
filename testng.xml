@@ -8,8 +8,7 @@
         <parameter name="pwd" value="123456add"/>
         <parameter name="systemPort" value="8220"/>
         <parameter name="deviceNo" value="1"/>
-        <classes>
-<!--
+        <classes><!--
             <class name="admin.Login">
                 <methods>
                     <include name="loginWithEmptyEmailAndPassword" />
@@ -19,14 +18,12 @@
                     <include name="loginWithInValidEmailAndInvalidPassword"/>
                 </methods>
             </class>
--->
-<!--
             <class name="admin.AutoTopUp">
                 <methods>
                     <include name="Login" />
                     <include name="AutoTopupWithNumber" />
                 </methods>
-            </class>-->
+            </class>
 
             <class name="admin.InstantPopUp">
                 <methods>
@@ -34,6 +31,35 @@
                     <include name="InstantPopUpMyNum"/>
                     <include name="InstantPopUpNewNum"/>
                     <include name="InstantPopUpFromSavedProfiles"/>
+                </methods>
+            </class>-->
+            <!--<class name="admin.ScheduledTopUp">
+                <methods>
+                    <include name="Login"/>
+                    <include name="ScheduledTopUpMyNumOneOff"/>
+                    <include name="ScheduledTopUpMyNumDaily"/>
+                    <include name="ScheduledTopUpMyNumWeekly"/>
+                    <include name="ScheduledTopUpMyNumMonthlyFistday"/>
+                    <include name="ScheduledTopUpMyNumMonthlyLastday"/>
+                    <include name="ScheduledTopUpInputNumOneOff"/>
+                    <include name="ScheduledTopUpInputNumDaily"/>
+                    <include name="ScheduledTopUpInputNumWeekly"/>
+                    <include name="ScheduledTopUpInputNumMonthlyFistday"/>
+                    <include name="ScheduledTopUpInputNumMonthlyLastday"/>
+                    <include name="ScheduledTopUpSavedProfileOneOff"/>
+                    <include name="ScheduledTopUpSavedProfileDaily"/>
+                    <include name="ScheduledTopUpSavedProfileWeekly"/>
+                    <include name="ScheduledTopUpSavedProfileMonthlyFistday"/>
+                    <include name="ScheduledTopUpSavedProfileMonthlyLastday"/>
+                    <include name="editScheduledTopup"/>
+                    <include name="DeactivateScheduledTopup"/>
+                </methods>
+            </class>-->
+            <class name="admin.TransactionLog">
+                <methods>
+                    <include name="Login"/>
+                    <include name="TransactionsTest"/>
+
                 </methods>
             </class>
         </classes>

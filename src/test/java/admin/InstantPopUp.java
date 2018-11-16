@@ -63,7 +63,7 @@ public class InstantPopUp extends TestBase {
 
         getDriver().findElement(By.id("com.seamfix.autotopup:id/topup_amount_input")).clear();
         getDriver().findElement(By.id("com.seamfix.autotopup:id/topup_amount_input")).sendKeys("50");
-
+        Thread.sleep(500);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/proceed_button")).click();
         Thread.sleep(2000);
         Alert alert = getDriver().switchTo().alert(); alert.accept();

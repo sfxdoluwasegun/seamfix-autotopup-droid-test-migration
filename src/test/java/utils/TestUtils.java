@@ -3,6 +3,7 @@ package utils;
 import com.aventstack.extentreports.Status;
 import com.testinium.deviceinformation.helper.ProcessHelper;
 import enums.TargetTypeEnum;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.By;
@@ -147,7 +148,20 @@ public class TestUtils extends TestBase {
             return false;
         }
     }
+    public static void PinMethod() throws InterruptedException {
+        Thread.sleep(1500);
+        getDriver().findElement(By.xpath("//android.widget.TextView[@text='1']")).click();
+        getDriver().findElement(By.xpath("//android.widget.TextView[@text='2']")).click();
+        getDriver().findElement(By.xpath("//android.widget.TextView[@text='3']")).click();
+        getDriver().findElement(By.xpath("//android.widget.TextView[@text='4']")).click();
 
+    }
+    public static void  ScrollTo(String element, String locator){
+        String scrollViewContainer_finder = "new UiSelector().resourceIdMatches(\".*"+element+"\")";
+        String neededElement_finder = "new UiSelector().resourceIdMatches(\".*"+locator+"\")";
+        WebElement abc = getDriver().findElement(MobileBy.AndroidUIAutomator("new UiScrollable(" + scrollViewContainer_finder + ")" +
+                ".scrollIntoView(" + neededElement_finder + ")"));
+    }
     public static void scrollUntilElementIsVisible(String elementType, String locator) throws InterruptedException {
         Thread.sleep(1000);
         while (!TestUtils.isElementPresent(elementType, locator)) {
