@@ -8,7 +8,7 @@
         <parameter name="pwd" value="123456add"/>
         <parameter name="systemPort" value="8220"/>
         <parameter name="deviceNo" value="1"/>
-        <classes><!--
+        <classes>
             <class name="admin.Login">
                 <methods>
                     <include name="loginWithEmptyEmailAndPassword" />
@@ -32,8 +32,8 @@
                     <include name="InstantPopUpNewNum"/>
                     <include name="InstantPopUpFromSavedProfiles"/>
                 </methods>
-            </class>-->
-            <!--<class name="admin.ScheduledTopUp">
+            </class>
+            <class name="admin.ScheduledTopUp">
                 <methods>
                     <include name="Login"/>
                     <include name="ScheduledTopUpMyNumOneOff"/>
@@ -68,14 +68,14 @@
                     <include name="Bonus"/>
                     <include name="referralsBonus"/>
                 </methods>
-            </class>-->
+            </class>
             <class name="admin.PaymentOptions">
                 <methods>
-                    <include name="Login"/><!--
+                    <include name="Login"/>
                     <include name="AddMasterCard"/>
                     <include name="AddVisaCard"/>
                     <include name="CardStatus"/>
-                    <include name="WalletThroughBank"/>-->
+                    <include name="WalletThroughBank"/>
                     <include name="WalletThroughMasterCard"/>
                     <include name="WalletThroughVisaCard"/>
                     <include name="WalletThroughVerveCard"/>
