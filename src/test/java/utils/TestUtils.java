@@ -6,10 +6,7 @@ import enums.TargetTypeEnum;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import org.apache.commons.codec.binary.Base64;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.testng.Assert;
 
 import java.io.*;
@@ -168,7 +165,10 @@ public class TestUtils extends TestBase {
             scrollDown();
         }
     }
+    public static void acceptAlert(){
+        Alert alert = getDriver().switchTo().alert(); alert.accept();
 
+    }
     //Possible solution to interacting with Android Internal or External memory
     public static String executeAdbCommand(String command) throws IOException {
         Process process = null;

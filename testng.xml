@@ -54,12 +54,31 @@
                     <include name="editScheduledTopup"/>
                     <include name="DeactivateScheduledTopup"/>
                 </methods>
-            </class>-->
+            </class>
             <class name="admin.TransactionLog">
                 <methods>
                     <include name="Login"/>
                     <include name="TransactionsTest"/>
+                </methods>
+            </class>
 
+            <class name="admin.Bonuses">
+                <methods>
+                    <include name="Login"/>
+                    <include name="Bonus"/>
+                    <include name="referralsBonus"/>
+                </methods>
+            </class>-->
+            <class name="admin.PaymentOptions">
+                <methods>
+                    <include name="Login"/><!--
+                    <include name="AddMasterCard"/>
+                    <include name="AddVisaCard"/>
+                    <include name="CardStatus"/>
+                    <include name="WalletThroughBank"/>-->
+                    <include name="WalletThroughMasterCard"/>
+                    <include name="WalletThroughVisaCard"/>
+                    <include name="WalletThroughVerveCard"/>
                 </methods>
             </class>
         </classes>
