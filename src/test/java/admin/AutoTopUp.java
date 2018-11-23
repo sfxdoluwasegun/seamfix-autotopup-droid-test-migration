@@ -21,7 +21,7 @@ public class AutoTopUp extends TestBase {
         getDriver().findElement(By.id("com.seamfix.autotopup:id/imageView2")).click();
         Thread.sleep(1000);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/fab_add_autotop_profile")).click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='Select Network Carrier']")).click();
         Thread.sleep(1000);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='MTN-NG']")).click();
@@ -64,7 +64,7 @@ public class AutoTopUp extends TestBase {
         WebElement toastView = getDriver().findElement(By.xpath("//android.widget.Toast[1]"));
         String text = toastView.getAttribute("name");
         //System.out.println(text);
-        assertSearchText("XPATH", "//android.widget.Toast[1]", "Request completed!");
+        assertSearchText("XPATH", "//android.widget.Toast[1]", "The Topup profile was created successfully");
 
     }
 

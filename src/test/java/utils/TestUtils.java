@@ -146,10 +146,13 @@ public class TestUtils extends TestBase {
         }
     }
     public static void PinMethod() throws InterruptedException {
-        Thread.sleep(1500);
+        Thread.sleep(200);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='1']")).click();
+        Thread.sleep(200);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='2']")).click();
+        Thread.sleep(200);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='3']")).click();
+        Thread.sleep(200);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='4']")).click();
 
     }
@@ -165,8 +168,10 @@ public class TestUtils extends TestBase {
             scrollDown();
         }
     }
-    public static void acceptAlert(){
+    public static void acceptAlert() throws InterruptedException {
+        Thread.sleep(1500);
         Alert alert = getDriver().switchTo().alert(); alert.accept();
+        Thread.sleep(500);
 
     }
     //Possible solution to interacting with Android Internal or External memory
