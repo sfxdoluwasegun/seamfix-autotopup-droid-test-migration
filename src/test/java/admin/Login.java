@@ -12,7 +12,7 @@ public class Login extends TestBase {
     @Test
     public void loginWithEmptyEmailAndPassword() throws InterruptedException{
         Thread.sleep(500);
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 45);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.seamfix.autotopup:id/app_title")));
         getDriver().findElement(By.id("com.seamfix.autotopup:id/login_button")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.seamfix.autotopup:id/toolbar")));

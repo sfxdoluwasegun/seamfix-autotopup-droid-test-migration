@@ -4,7 +4,7 @@
     <parameter name="groupReport" value="/DroidReport.html"/>
     <parameter name="toMails" value="soli@seamfix.com;"/>
     <test name="AutoTopUp-Android">
-        <parameter name="email" value="sunepastar13@gmail.com"/>
+        <parameter name="email" value="sunepastar13@gustr.com"/>
         <parameter name="pwd" value="123456add"/>
         <parameter name="systemPort" value="8220"/>
         <parameter name="deviceNo" value="1"/>
@@ -77,10 +77,48 @@
                     <include name="CardStatus"/>
                     <include name="WalletThroughBank"/>
                     <include name="WalletThroughMasterCard"/>
-                    <include name="WalletThroughVisaCard"/>
+                    <include name="WalletThroughVisaCard"/><!--
                     <include name="WalletThroughVerveCard"/>
+                    <include name="WalletThroughBankCard"/>-->
                 </methods>
             </class>
+            <class name="admin.Sharer">
+                <methods>
+                    <include name="Login"/>
+                    <include name="CopyLink"/>
+                    <include name="ShareLink"/>
+                    <include name="SendLinkBySms"/>
+                </methods>
+            </class>
+
+            <class name="admin.Security">
+                <methods>
+                    <include name="Login"/>
+                    <include name="changePin"/>
+                    <include name="deactivatePin"/>
+                    <include name="activatePin"/>
+                </methods>
+            </class>
+
+            <class name="admin.Logout">
+                <methods>
+                    <include name="Login"/>
+                    <include name="logout" />
+                </methods>
+            </class>
+
+            <class name="admin.Profile">
+                <methods>
+                    <include name="Login"/>
+                    <include name="editProfile"/>
+                    <include name="UploadImage"/>
+                    <include name="ChangeWrongPassword"/>
+                    <include name="ChangeToTheSamePassword"/>
+                    <include name="ChangePassword"/>
+                </methods>
+            </class>
+
+
         </classes>
     </test>
 </suite> <!-- Suite -->
