@@ -481,6 +481,7 @@ public class ScheduledTopUp extends TestBase {
         getDriver().findElement(By.id("com.seamfix.autotopup:id/fab_add_schedule")).click();
         Thread.sleep(500);
         getDriver().findElement(By.id("com.seamfix.autotopup:id/topup_mode_spinner")).click();
+
         Thread.sleep(500);
         getDriver().findElement(By.xpath("//android.widget.TextView[@text='Type a phone number']")).click();
 

@@ -3,7 +3,7 @@
 <suite name="Auto Top Up Suite">
     <parameter name="groupReport" value="/DroidReport.html"/>
     <parameter name="toMails" value="soli@seamfix.com;"/>
-    <parameter name="server" value="local"/>
+    <parameter name="server" value="remote-jenkins"/>
     <test name="AutoTopUp-Android">
         <parameter name="email" value="sunepastar13@gustr.com"/>
         <parameter name="pwd" value="123456add"/>
